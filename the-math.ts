@@ -17,8 +17,8 @@ function tipSpeedCalculator(diameter: number, volts: number, kVolts: number) {
     const kilometersPerMinute: number = metersPerMinute / 1000;
     // console.log( { milesPerMinute, kilometersPerMinute } );
 
-    const milesPerHour: number = milesPerMinute * 60;
-    const kilometersPerHour: number = kilometersPerMinute * 60;
+    const milesPerHour: number = parseFloat((milesPerMinute * 60).toFixed(2));
+    const kilometersPerHour: number = parseFloat((kilometersPerMinute * 60).toFixed(2));
     // console.log( { milesPerHour, kilometersPerHour } );
 
     return {milesPerHour, kilometersPerHour};
@@ -26,4 +26,12 @@ function tipSpeedCalculator(diameter: number, volts: number, kVolts: number) {
 
 
 console.log(tipSpeedCalculator(6, 22.2, 2400));
+/*
+  milesPerHour: 951.0457760412737
+  kilometersPerHour: 1530.5598133973676
+*/
 console.log(tipSpeedCalculator(5, 25, 1800));
+/*
+  milesPerHour: 669.3734347137342
+  kilometersPerHour: 1077.25212091594
+*/
